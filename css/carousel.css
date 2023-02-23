@@ -42,7 +42,9 @@ footer {
   top: 0;
   left: 0;
   min-width: 50%;
-  height: auto;
+  min-height: fit-content;
+
+
 }
 
 
