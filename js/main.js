@@ -1,4 +1,4 @@
-import {getInfos} from "./api.js";
+import {getgameinfo, getInfos} from "./api.js";
 
 
 const sectionCards = document.getElementById('gamesCards');
@@ -11,7 +11,7 @@ export function showTopGame(response) {
         
         // Création cards
         const gameCard = document.createElement("div");
-        gameCard.classList.add("card");
+        gameCard.classList.add("gameCard");
         sectionCards.append(gameCard);
 
         // Image
@@ -30,8 +30,7 @@ export function showTopGame(response) {
         title.classList.add("title");
         titleMeta.append(title);
         title.textContent = response.results[i].name;
-
-        /*
+               
         // Metacritic
         const gameMetacritic = document.createElement("div");
         gameMetacritic.classList.add("gameMetacritic");
@@ -42,23 +41,21 @@ export function showTopGame(response) {
             gameMetacritic.innerHTML = response.results[i].metacritic;
         }
         
-        titleMeta.append(gameMetacritic);*/
+        titleMeta.append(gameMetacritic);
 
-        /*
+        
         // Date de sortie
         const gameDate = document.createElement("p");
         gameDate.classList.add("gameDate");
         gameDate.innerHTML = response.results[i].released;
-        gameCard.append(gameDate);*/
-
-        /*
+        gameCard.append(gameDate);
+        
         // Genres
         const gameGenres = document.createElement("p");
         gameGenres.classList.add("gameGenres");
         gameGenres.innerHTML = response.results[i].genres[0].name;
-        gameCard.append(gameGenres);*/
-        
-        /*
+        gameCard.append(gameGenres);
+         
         // Screenshots
         const screenTxt = document.createElement("p");
         screenTxt.classList.add("screenTxt");
@@ -70,32 +67,27 @@ export function showTopGame(response) {
         gameScreenshots.setAttribute("src", response.results[i].short_screenshots[1].image);
         gameCard.append(screenTxt);
         gameCard.append(zoneImg);
-        zoneImg.append(gameScreenshots);*/
+        zoneImg.append(gameScreenshots);
     }
-}
+    
+    for (let i = 0; i < response.results.length; i++) {
 
-
-
-function showValueLocal() {
-    const getDataFromLocalStorage = localStorage.getItem("datas");
-    const dataParsed = JSON.parse(getDataFromLocalStorage);
-
-    if (localStorage.length === 0) {
-        sectionIdentity.classList.add("hide");
-    } else {
-        sectionIdentity.classList.remove("hide");
-        const txtName = document.createElement("h3");
-        txtName.classList.add('txtName');
-        txtName.textContent = `Bonjour ${dataParsed.name}, bonne navigation sur le site!`;
-        sectionIdentity.append(txtName);
+        const descrip = document.createElement("p");
+        descrip.classList.add("descrip");
+        descrip.innerHTML = response.results[i];
+        descrip.append(showTopGame);
     }
-}
 
+   
+
+    
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     
     if (window.location.pathname.includes("games.html")) {
         getInfos();
+
         showValueLocal();
     } 
 });
