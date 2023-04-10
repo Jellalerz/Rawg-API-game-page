@@ -30,7 +30,56 @@ export function showTopGame(response) {
         title.classList.add("title");
         titleMeta.append(title);
         title.textContent = response.results[i].name;
-               
+        title.addEventListener('click', getgameinfo2);
+    
+        async function getgameinfo2() {
+
+            try {
+                const API_KEY = "af429b274fef4438b2554a5d186eb036";
+                const res3 = await fetch(`https://api.rawg.io/api/games/${response.results[i].slug}?key=${API_KEY}`);
+                const resParsed3 = await res3.json();
+
+                //screen
+
+                const res4 = await fetch(`https://api.rawg.io/api/games/${response.results[i].slug}/screenshots?key=${API_KEY}`);
+                const resParsed4 = await res4.json();
+
+                sessionStorage.setItem('image_01', resParsed4.results[0].image);
+                sessionStorage.setItem('image_02', resParsed4.results[1].image);
+                sessionStorage.setItem('image_03', resParsed4.results[2].image);
+                sessionStorage.setItem('image_04', resParsed4.results[3].image);
+                
+                //console.log(resParsed3);
+                //var valordes = resParsed3.description
+
+
+                //we use sessionStorage to save the values we got from our JSON which values are saved in resParsed3.
+                //all of this data will be saved to be used in another page to show info about the games
+                sessionStorage.setItem("cover", resParsed3.background_image);
+                sessionStorage.setItem("gamenam", resParsed3.name);
+                sessionStorage.setItem("descrip", resParsed3.description_raw);
+
+                //this function will open a new tab in our browser that will display all the data we saved before.
+                function display() {
+
+                    window.location.replace("displayinfo.html");
+
+                }
+                display();
+                return resParsed3, resParsed4;
+
+            } catch (error) {
+                throw new Error(error);
+            };
+
+
+
+        }
+
+
+
+
+        
         // Metacritic
         const gameMetacritic = document.createElement("div");
         gameMetacritic.classList.add("gameMetacritic");
@@ -82,6 +131,7 @@ export function showTopGame(response) {
 
     
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     

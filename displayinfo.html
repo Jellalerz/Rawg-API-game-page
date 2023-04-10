@@ -1,29 +1,38 @@
-<script>
-import {getInfos} from "./api.js";
-import {topFunction} from "main.js";
-</script>
+<script type="module">
+
+    import {getInfos2,getgameinfo} from "./api.js";
+    import {getgameinfo2} from "./main2.js";
+
+    </script>
 
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games DB - Home</title>
-        <!-- google font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oxanium&display=swap" rel="stylesheet">
-        <!-- import css -->
-        <link rel="stylesheet" href="css/cards.css">
-        
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    
 
-<!-- Bootstrap core CSS -->
-<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games DB - Home</title>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium&display=swap" rel="stylesheet">
+  <!-- import css -->
+  <link rel="stylesheet" href="css/displayinfo.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
 
 </head>
 
@@ -76,63 +85,142 @@ import {topFunction} from "main.js";
       </div>
     </nav>
   </header>
-      
 
-    <main>
-       
+  <main>
 
-        <section id="gamesCards">
+    <section id="gamesCards">
 
-        </section>
+    </section>
 
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <p class="descript"></p>
 
-    </main>
+    <p id="aqui">
+      &nbsp; 
+    </p>
+
+
+    <div id="myimg">
+
+    </div>
+
+    <div>
+      &nbsp;
+    </div>
+
+
+  
+  
+  </main>
+
+  <script>
+
+    //we retrieve all the values we storen in our main.js
+    var gamename = sessionStorage.getItem("gamenam");
+    console.log(gamename);
+    var description = sessionStorage.getItem("descrip");
+    console.log(description);
+    var cover = sessionStorage.getItem("cover");
+    console.log(cover);
+    var video = sessionStorage.getItem("video");
+    console.log(video);
 
     
+    //we retrieve all the values to show our images we got from our query
+    var image_01 = sessionStorage.getItem("image_01");
+    console.log(image_01);
+    var image_02 = sessionStorage.getItem("image_02");
+    console.log(image_02);
+    var image_03 = sessionStorage.getItem("image_03");
+    console.log(image_03);
+    var image_04 = sessionStorage.getItem("image_04");
+    console.log(image_04);
+   
+
+
+
+    document.body.onload = addElement;
+
+    function addElement() {
+      // creat  e a new div element
+      const newDiv = document.createElement("p");
+      const newDiv2 = document.createElement("div");
+      const img = document.createElement('img');
+  
+      // and give it some content 
+      const newContent = document.createTextNode(gamename);
+      const newContent2 = document.createTextNode(description);
+      img.src =cover;
+     
+      
+
+      // add the text node to the newly created div
+      document.getElementById('aqui').appendChild(newContent);
+      document.getElementById('aqui2').appendChild(newContent2);
+      document.getElementById('myimg').appendChild(img);
+      
+      document.querySelector('#img_01').src = image_01;
+      document.querySelector('#img_02').src = image_02;
+      document.querySelector('#img_03').src = image_03;
+      document.querySelector('#img_04').src = image_04;
+      
+      ;
+      
+
+      // add the newly created element and its content into the DOM
+      const currentDiv = document.getElementById("descript");
+      document.body.insertBefore(newDiv, currentDiv);
+    }
+
+  </script>
+
+
+
+  <p id="aqui2">
+    &nbsp; 
+  </p>
+
+  <div id="glide_manager">
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide"><img src="" id="img_01"></li>
+        <li class="glide__slide"><img src="" id="img_02">  </li>
+        <li class="glide__slide"><img src="" id="img_03"></li>
+        <li class="glide__slide"><img src="" id="img_04"></li>
+      </ul>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    new Glide('.glide').mount()
+  </script>
+
+  <!--nav bar pagination-->
+
   <nav aria-label="Page navigation example"  id="nav_down">
     <ul class="pagination">
       <li class="page-item">
-        
+        <a class="page-link" href="#" aria-label="Previous" id="nav_prev" onclick="history.back()">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
       </li>
       <li class="page-item"><a class="page-link" href="/games.html" id="nav_1">1</a></li>
       <li class="page-item"><a class="page-link" href="/games2.html" id="nav_2">2</a></li>
       <li class="page-item"><a class="page-link" href="/games3.html" id="nav_3">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="games2.html" aria-label="Next" id="nav_next">
-          <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Next</span>
-        </a>
-      </li>
+    
     </ul>
   </nav>
 
-    
+
 </body>
 
-<script>
-  let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-</script>
-
-<script type="module" src="js/main.js"></script>
 <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="js/main2.js"></script>
 
 </html>

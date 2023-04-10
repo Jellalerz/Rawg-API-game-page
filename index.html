@@ -1,161 +1,229 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Carousel Template · Bootstrap v5.0</title>
+<script type="module
+">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-
- <!-- Google Fonts -->
- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+   // import {getInfos} from "./api.js";
     
-
-    <!-- Bootstrap core CSS -->
-<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
+    </script>
     
-    <!-- Custom styles for this template -->
-    <link href="/css/carousel.css" rel="stylesheet">
-
-    <script src="/conn/api.js"></script>
-
-  </head>
-  <body>
     
-<header>
-  
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark opacity-25 shadow-5-strong">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Game Data</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="games.html">Library</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<main>
-
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-
-        <img src="https://www.pixelstalk.net/wp-content/uploads/images6/Doom-Eternal-Wallpaper-HD-Free-download.png" class="d-block w-200" alt="..." width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-       
-        <div class="container">
-
-          <div class="carousel-caption text-start">
-            <h1>DOOM ETERNAL</h1>
-            <p>Demons are waiting to be crushed!</p>
-            <p><a class="btn btn-lg btn-danger" href="#">Download</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YUKIGAMES</title>
+            <!-- google font -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Oxanium&display=swap" rel="stylesheet">
+            <!-- import css -->
+            <link rel="stylesheet" href="css/index.css">
+            
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
         
-        <img src="https://wallpapercave.com/wp/wp3500486.jpg" class="d-block w-200" alt="..." width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>METRO REDUX</h1>
-            <p>The world is in trobule and only you can save it...</p>
-            <p><a class="btn btn-lg btn-primary bg-warning" href="#">Download</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-
-        <img src="https://www.pockettactics.com/wp-content/sites/pockettactics/2022/09/tower-of-fantasy-wallpaper-shirli-and-nemesis.jpg" class="d-block w-200" alt="..." width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>TOWER OF FANTASY</h1>
-            <p>Adventure awaits in the big open world of tower fantasy!</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Download</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-  <!--GAMES SECTION-->
-
-
-  <!-- FOOTER -->
-  <footer class="d-flex flex-justify-content-between align-items-center " id="footer_id">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-      </a>
-      <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Company, Inc</span>
-    </div>
-
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-    </ul>
-  </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
   
+    
+    </head>
+    
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container px-5">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#eb07d0" class="bi bi-controller" viewBox="0 0 16 16" id="gamezone">
+            <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z"/>
+            <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z"/>
+          </svg>
+            <a class="navbar-brand" href="index.html" id="gamezonetxt">GameZone</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home    </a></li>
+                    <li class="nav-item"><a class="nav-link" href="games.html">Library    </a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    
+                   
+                    <!--<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                            <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
+                            <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    &nbsp;
+   
+    <header class="bg py-5">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+                <div class="col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="my-5 text-center text-xl-start">
+                        <h1 class="display-5 fw-bolder text-white mb-2">EXPLORE MORE THAN 30 NEW AND OLD GAMES</h1>
+                        <h3>GET STARTED WITH OUR WHOLE GAMES LIBRARY</h3> 
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="games.html">Get Started</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                  &nbsp;
+                  <div class="container">
 
-</main>
+                    &nbsp;
+                    <div class="glide">
+                      <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                          <li class="glide__slide"><img id="algo" src="" ></li>
+                          <li class="glide__slide"><img id="algo1" src="">  </li>
+                          <li class="glide__slide"><img id="algo2" src="">></li>
+                          <li class="glide__slide"><img id="algo3" src="">></li>
+                        </ul>
+                        <div class="glide__arrows" data-glide-el="controls">
+                          <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+                          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
+
+      
+<!--
+        <div class="container">
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide"><img id="algo" src="" ></li>
+                <li class="glide__slide"><img id="algo1" src="">  </li>
+                <li class="glide__slide"><img id="algo2" src="">></li>
+                <li class="glide__slide"><img id="algo3" src="">></li>
+              </ul>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        -->
+        <div class="col-md-4"></div>
+        
+
+        <section id="scroll">
+          <div class="container px-5">
+              <div class="row gx-5 align-items-center">
+                  <div class="col-lg-6 order-lg-2">
+                      <div class="p-5"><img class="img-fluid" src="https://media.rawg.io/media/games/120/1201a40e4364557b124392ee50317b99.jpg" alt="..." /></div>
+                  </div>
+                  <div class="col-lg-6 order-lg-1">
+                      <div class="p-5">
+                          <h2 class="display-4">EXPLORE</h2>
+                          <h3>DISCOVER NEW GAME GENRES TO PLAY</h3> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <div class="col-md-4"></div>
+      <!-- Content section 2-->
+      <section>
+          <div class="container px-5">
+              <div class="row gx-5 align-items-center">
+                  <div class="col-lg-6">
+                      <div class="p-5"><img class="img-fluid" src="https://media.rawg.io/media/games/6cd/6cd653e0aaef5ff8bbd295bf4bcb12eb.jpg" alt="..." /></div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="p-5">
+                          <h2 class="display-4">READ ABOUT YOUR FAVORITE GAME UPDATES</h2>
+                          <h3>READ ABOUT YOUR GAME DLC'S AND PATCHES EVERY WEEK</h3>  
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <div class="col-md-4"></div>
+      <!-- Content section 3-->
+      <section>
+          <div class="container px-5">
+              <div class="row gx-5 align-items-center">
+                  <div class="col-lg-6 order-lg-2">
+                      <div class="p-5"><img class="img-fluid " src="https://media.rawg.io/media/games/c6b/c6bfece1daf8d06bc0a60632ac78e5bf.jpg" alt="..." /></div>
+                  </div>
+                  <div class="col-lg-6 order-lg-1">
+                      <div class="p-5">
+                          <h2 class="display-4">DISCOVER!</h2>
+                          <h3>FIND OUT NEW GAMES TO ADD YOUR WISHLIST</h3>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+       
+      
+
+       
+
+
+        
+
+      <footer class=" py-4 mt-auto" id="footerindex">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; YUKIGAMES. 2023</div></div>
+                <div class="col-auto">
+                    <a class="link-light small" href="#!">Privacy</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Terms</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+       
+         
+        <script>
+const config = {
+        type: 'carousel',
+        perView: 2,
+        breakpoints:{
+          600:{
+            perView:2
+          }
+        }
+      };
+            new Glide('.glide').mount()
+           
+          </script>
+          <script type="module" src="js/index.js"></script>
+          </body>
+         
+        
+    
+    </html>
 
     <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="js/main.js"></script>
-      
-  </body>
-</html>

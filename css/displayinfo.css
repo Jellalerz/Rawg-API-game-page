@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /*background: url('../img/bg.jpg') fixed;*/
+
+    background: radial-gradient(#ccc, #060e15);
+}
+
+/*
+.navbar-nav .nav-item .nav-link {
+    color: rgb(212, 0, 255);
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: rgb(231, 160, 212);
+}
+
+.navbar-brand{
+    color: rgb(212, 0, 255);
+}
+.navbar-nav .navbar-brand.active .nav-link,
+.navbar-nav .navbar-brand:hover .nav-link {
+    color: rgb(15, 9, 183);
+}
+*/
+
+#nav_header{
+    color: #e507d2;
+}
+
+#search_btn{
+    color: #e507d2;
+    border-color: #e507d2;
+}
+
+#nav_down{
+    margin-bottom: -10%;
+}
+
+#nav_prev{
+    color: rgb(235, 235, 235);
+    /*background-color: rgb(224, 8, 202);*/
+    background: radial-gradient(#000, #e507d2);
+    border-color: rgb(0, 0, 0);
+}
+#nav_next{
+    color: rgb(235, 235, 235);
+    /*background-color: rgb(224, 8, 202);*/
+    background: radial-gradient(#000, #e507d2);
+    border-color: rgb(0, 0, 0);
+}
+#nav_1{
+    color: rgb(235, 235, 235);
+    /*background-color: rgb(224, 8, 202);*/
+    background: radial-gradient(#000, #e507d2);
+    border-color: rgb(0, 0, 0);
+}
+#nav_2{
+    color: rgb(235, 235, 235);
+    /*background-color: rgb(224, 8, 202);*/
+    background: radial-gradient(#000, #e507d2);
+    border-color: rgb(0, 0, 0);
+}
+#nav_3{
+    color: rgb(235, 235, 235);
+    /*background-color: rgb(224, 8, 202);*/
+    background: radial-gradient(#000, #e507d2);
+    border-color: rgb(0, 0, 0);
+}
+
+header {
+    background-color: #060e15;
+    padding: 2%;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Oxanium', cursive;
+    font-size: 17px;
+    background-color: #060e15;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav a:hover {
+    transform: scale(1.05);
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 2% 0 0 2%;
+    color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    font-size: 2.5rem;
+}
+
+body{
+    text-align: center;
+    /*background: radial-gradient(#382fac, #060e15)*/
+    background: url('../Assets/img/programming-games-software-engineering-perspectives_0.png') fixed;
+}
+
+p{
+    font-size: large;
+    font-family: 'Oxanium', cursive;
+    color: #ccc;
+    margin: 100px;
+    background: radial-gradient(#372faca1, #060e159f)
+    
+}
+
+
+img{
+    
+    max-inline-size: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    flex: content;
+}
+
+#glide_manager{
+    
+    flex: content;
+    align-items: center;
+    margin: 5%;
+    
+}
+
+#gamezone{
+    margin: 1%;
+}
+
+#gamezonetxt{
+    font-size: large;
+}
+
+#facebook{
+    margin: 1%;
+}
+
+#instagram{
+    margin: 1%;
+}
+
+#youtube{
+    margin: 1%;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #060e15;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(214, 6, 169, 0.8);
+	border-radius: 50px;
+}
+
+.hide {
+    display: none;
+}
